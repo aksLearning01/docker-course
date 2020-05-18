@@ -19,5 +19,6 @@ Building an Image
 #Docker commands that you can execute with the first step after dockerFile addition are as:
 
 1.docker build -t akslearning/rest-api-with-docker:version-1
+
 2. docker container run -p 8082:8082 akslearning/rest-api-with-docker:version-1
 
