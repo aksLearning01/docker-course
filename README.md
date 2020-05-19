@@ -11,7 +11,7 @@ Run edu.aks.docker.learn.RestApiWithDockerApplication as a Java Application.
 
 http://localhost:8082/
 
- <p> Hello World </p>
+  #c5f015 Hello World 
 
 ## Docker Commands - Creating Image Manually
 
@@ -38,7 +38,6 @@ http://localhost:8082/
 # Plugins
 * Dockerfile Maven
 * From Spotify  (https://github.com/spotify/dockerfile-maven)
-
 
 <plugin>
 	<groupId>com.spotify</groupId>
