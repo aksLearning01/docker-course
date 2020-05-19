@@ -1,8 +1,28 @@
+# REST-API-WITH-DOCKER
+
 The steps followed throughout this repository is mentioned as below:
 
 1.   Created a spring boot project and added rest api to expose some end points.
 2.   Created a docker file to build image and run as container.
 
+
+## Running the Application
+Run edu.aks.docker.learn.RestApiWithDockerApplication as a Java Application.
+
+http://localhost:8080/hello-world
+Hello World
+
+## Docker Commands - Creating Image Manually
+
+docker run -dit openjdk:8-jdk-alpine
+docker container exec naughty_knuth ls /tmp
+docker container cp target/hello-world-rest-api.jar naughty_knuth:/tmp
+docker container exec naughty_knuth ls /tmp
+docker container commit naughty_knuth in28min/hello-world-rest-api:manual1
+docker run in28min/hello-world-rest-api:manual1
+docker container ls
+docker container commit --change='CMD ["java","-jar","/tmp/hello-world-rest-api.jar"]' naughty_knuth in28min/hello-world-rest-api:manual2
+docker run -p 8080:8080 in28min/hello-world-rest-api:manual2
 
 # Building an Image
 1. Build a Jar - /target/hello-world-rest-api.jar
@@ -33,7 +53,7 @@ The steps followed throughout this repository is mentioned as below:
 		</execution>
 	</executions>
 	<configuration>
-		<repository>in28min/${project.name}</repository>
+	<repository>in28min/${project.name}</repository>
 		<tag>${project.version}</tag>
 		<skipDockerInfo>true</skipDockerInfo>
 	</configuration>
