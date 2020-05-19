@@ -37,8 +37,10 @@ Hello World
 2. docker container run -p 8082:8082 akslearning/rest-api-with-docker:version-1
 
 # Plugins
-* Dockerfile Maven
-* From [Spotify]  (https://github.com/spotify/dockerfile-maven)
+
+### Dockerfile Maven
+ - From Spotify
+ - https://github.com/spotify/dockerfile-maven
 ```
 <plugin>
 	<groupId>com.spotify</groupId>
