@@ -10,8 +10,9 @@ The steps followed throughout this repository is mentioned as below:
 Run edu.aks.docker.learn.RestApiWithDockerApplication as a Java Application.
 
 http://localhost:8082/
-
-  #c5f015 Hello World 
+```
+Hello World 
+```
 
 ## Docker Commands - Creating Image Manually
 
