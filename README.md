@@ -38,8 +38,8 @@ Hello World
 
 # Plugins
 * Dockerfile Maven
-* From Spotify  (https://github.com/spotify/dockerfile-maven)
-
+* From [Spotify]  (https://github.com/spotify/dockerfile-maven)
+```
 <plugin>
 	<groupId>com.spotify</groupId>
 	<artifactId>dockerfile-maven-plugin</artifactId>
@@ -58,3 +58,4 @@ Hello World
 		<skipDockerInfo>true</skipDockerInfo>
 	</configuration>
 </plugin>
+```
