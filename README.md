@@ -9,23 +9,24 @@ The steps followed throughout this repository is mentioned as below:
 ## Running the Application
 Run edu.aks.docker.learn.RestApiWithDockerApplication as a Java Application.
 
-http://localhost:8080/hello-world
-Hello World
+http://localhost:8082/
+
+ <p> Hello World </p>
 
 ## Docker Commands - Creating Image Manually
 
-docker run -dit openjdk:8-jdk-alpine
-docker container exec naughty_knuth ls /tmp
-docker container cp target/hello-world-rest-api.jar naughty_knuth:/tmp
-docker container exec naughty_knuth ls /tmp
-docker container commit naughty_knuth in28min/hello-world-rest-api:manual1
-docker run in28min/hello-world-rest-api:manual1
-docker container ls
-docker container commit --change='CMD ["java","-jar","/tmp/hello-world-rest-api.jar"]' naughty_knuth in28min/hello-world-rest-api:manual2
-docker run -p 8080:8080 in28min/hello-world-rest-api:manual2
+- docker run -dit openjdk:8-jdk-alpine
+- docker container exec <IMAGE_NAME> ls /tmp
+- docker container cp target/rest-api-with-docker.jar <IMAGE_NAME>:/tmp
+- docker container exec <IMAGE_NAME> ls /tmp
+- docker container commit <IMAGE_NAME> akslearning/rest-api-with-docker:manual1
+- docker run akslearning/rest-api-with-docker:manual1
+- docker container ls
+- docker container commit --change='CMD ["java","-jar","/tmp/hello-world-rest-api.jar"]' <IMAGE_NAME> akslearning/rest-api-with-docker:manual2
+- docker run -p 8082:8082 akslearning/rest-api-with-docker:manual2
 
 # Building an Image
-1. Build a Jar - /target/hello-world-rest-api.jar
+1. Build a Jar - /target/rest-api-with-docker.jar
 2. Setup the Prerequisites for Running the JAR - openjdk:8-jdk-alpine
 3. Copy the jar
 4. Run the jar
@@ -36,8 +37,7 @@ docker run -p 8080:8080 in28min/hello-world-rest-api:manual2
 
 # Plugins
 * Dockerfile Maven
-* From Spotify
-(https://github.com/spotify/dockerfile-maven)
+* From Spotify  (https://github.com/spotify/dockerfile-maven)
 
 
 <plugin>
